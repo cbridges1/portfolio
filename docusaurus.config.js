@@ -89,7 +89,7 @@ const config = {
   title: docusaurusData.title || "My Site",
   tagline: docusaurusData.tagline || "Dinosaurs are cool",
   url: docusaurusData.url || "https://tinasaurus.vercel.app/",
-  baseUrl: "/",
+  baseUrl: "/portfolio/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.svg",
