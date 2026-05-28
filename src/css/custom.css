@@ -163,10 +163,28 @@ code {
   border: 1px solid var(--portfolio-card-border);
 }
 
+/* ─── Logo ────────────────────────────────────────────────── */
+[data-theme="dark"] .navbar__logo img {
+  filter: invert(1);
+}
+
 /* ─── Footer ──────────────────────────────────────────────── */
 .footer {
-  background: var(--ifm-background-surface-color);
   border-top: 1px solid var(--ifm-hr-border-color);
+}
+
+[data-theme="dark"] .footer {
+  background: #111111;
+  color: #d1d5db;
+}
+
+[data-theme="dark"] .footer__link-item,
+[data-theme="dark"] .footer__copyright {
+  color: #9ca3af;
+}
+
+[data-theme="dark"] .footer__link-item:hover {
+  color: #e5e7eb;
 }
 
 .footer__title {

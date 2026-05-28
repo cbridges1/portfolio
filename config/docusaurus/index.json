@@ -28,12 +28,12 @@
   ],
   "logo": {
     "alt": "Jalen Bridges",
-    "src": "/img/tina-icon.svg"
+    "src": "/img/logo.svg"
   },
   "title": "Jalen Bridges",
   "tagline": "Software Engineer at Guidewire Software",
   "footer": {
-    "style": "dark",
+    "style": "light",
     "links": [
       {
         "title": "Portfolio",

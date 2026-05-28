@@ -10,7 +10,7 @@ export default {
   "baseUrl": "/",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
-  "favicon": "img/favicon.ico",
+  "favicon": "img/favicon.svg",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -24,13 +24,9 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/jalenbridges/Source/portfolio/sidebars.js",
-          "editUrl": "https://jalenbridges.dev/admin/#/collections/doc"
+          "sidebarPath": "/Users/jalenbridges/Source/portfolio/sidebars.js"
         },
-        "blog": {
-          "showReadingTime": true,
-          "editUrl": "https://jalenbridges.dev/admin/#/collections/post"
-        },
+        "blog": false,
         "theme": {
           "customCss": "/Users/jalenbridges/Source/portfolio/src/css/custom.css"
         }
@@ -39,10 +35,10 @@ export default {
   ],
   "themeConfig": {
     "navbar": {
-      "title": "Jalen Bridges",
+      "title": "",
       "logo": {
         "alt": "Jalen Bridges",
-        "src": "/img/tina-icon.svg"
+        "src": "/img/logo.svg"
       },
       "items": [
         {
@@ -72,7 +68,7 @@ export default {
       "hideOnScroll": false
     },
     "footer": {
-      "style": "dark",
+      "style": "light",
       "links": [
         {
           "title": "Portfolio",
