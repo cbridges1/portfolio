@@ -38,7 +38,7 @@ export default {
       "title": "",
       "logo": {
         "alt": "Jalen Bridges",
-        "src": "/img/logo.svg"
+        "src": "img/logo.svg"
       },
       "items": [
         {

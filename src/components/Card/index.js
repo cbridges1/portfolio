@@ -18,24 +18,32 @@ export const Card = ({ title, icon, href, horizontal, color, children }) => {
     </>
   );
 
-  const className = clsx(styles.card, horizontal && styles.horizontal);
+  const className = clsx(
+    styles.card,
+    horizontal && styles.horizontal,
+    color && styles.accented,
+  );
+
+  const style = color ? { "--card-accent": color } : {};
 
   if (href) {
     return (
-      <Link href={href} className={className}>
+      <Link href={href} className={className} style={style}>
         {inner}
       </Link>
     );
   }
 
-  return <div className={className}>{inner}</div>;
+  return (
+    <div className={className} style={style}>
+      {inner}
+    </div>
+  );
 };
 
 export const CardGroup = ({ cols = 2, children }) => {
   return (
-    <div
-      className={clsx(styles.cardGroup, cols === 3 ? styles.cols3 : styles.cols2)}
-    >
+    <div className={clsx(styles.cardGroup, cols === 3 ? styles.cols3 : styles.cols2)}>
       {children}
     </div>
   );
