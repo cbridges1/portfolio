@@ -1,0 +1,17 @@
+{
+  "id": "tutorial-basics/deploy-your-site",
+  "title": "Deploy Your Site",
+  "description": "Docusaurus is a static-site-generator (also called Jamstack).",
+  "source": "@site/docs/tutorial-basics/deploy-your-site.mdx",
+  "sourceDirName": "tutorial-basics",
+  "slug": "/tutorial-basics/deploy-your-site",
+  "permalink": "/docs/tutorial-basics/deploy-your-site",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://jalenbridges.dev/admin#/collections/doc/docs/tutorial-basics/deploy-your-site.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Deploy Your Site"
+  }
+}

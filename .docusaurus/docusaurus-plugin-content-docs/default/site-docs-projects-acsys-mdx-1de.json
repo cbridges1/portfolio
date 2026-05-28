@@ -1,0 +1,55 @@
+{
+  "id": "projects/acsys",
+  "title": "Acsys",
+  "description": "Easy-install headless CMS with support for SQLite, MySQL, and Cloud Firestore",
+  "source": "@site/docs/projects/acsys.mdx",
+  "sourceDirName": "projects",
+  "slug": "/projects/acsys",
+  "permalink": "/docs/projects/acsys",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://jalenbridges.dev/admin#/collections/doc/docs/projects/acsys.mdx",
+  "tags": [
+    {
+      "label": "JavaScript",
+      "permalink": "/docs/tags/java-script"
+    },
+    {
+      "label": "Node.js",
+      "permalink": "/docs/tags/node-js"
+    },
+    {
+      "label": "React",
+      "permalink": "/docs/tags/react"
+    },
+    {
+      "label": "CMS",
+      "permalink": "/docs/tags/cms"
+    },
+    {
+      "label": "Open Source",
+      "permalink": "/docs/tags/open-source"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Acsys",
+    "description": "Easy-install headless CMS with support for SQLite, MySQL, and Cloud Firestore",
+    "tags": [
+      "JavaScript",
+      "Node.js",
+      "React",
+      "CMS",
+      "Open Source"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Projects",
+    "permalink": "/docs/category/projects"
+  },
+  "next": {
+    "title": "React Native AdMob Native Ads",
+    "permalink": "/docs/projects/react-native-admob"
+  }
+}

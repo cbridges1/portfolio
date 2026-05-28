@@ -1,0 +1,17 @@
+{
+  "id": "tutorial-extras/translate-your-site",
+  "title": "Translate Your Site",
+  "description": "Let's translate docs/intro.md to French.",
+  "source": "@site/docs/tutorial-extras/translate-your-site.mdx",
+  "sourceDirName": "tutorial-extras",
+  "slug": "/tutorial-extras/translate-your-site",
+  "permalink": "/docs/tutorial-extras/translate-your-site",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://jalenbridges.dev/admin#/collections/doc/docs/tutorial-extras/translate-your-site.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Translate Your Site"
+  }
+}

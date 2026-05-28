@@ -1,0 +1,45 @@
+{
+  "id": "projects/hyve",
+  "title": "Hyve",
+  "description": "Go-based developer infrastructure tooling",
+  "source": "@site/docs/projects/hyve.mdx",
+  "sourceDirName": "projects",
+  "slug": "/projects/hyve",
+  "permalink": "/docs/projects/hyve",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://jalenbridges.dev/admin#/collections/doc/docs/projects/hyve.mdx",
+  "tags": [
+    {
+      "label": "Go",
+      "permalink": "/docs/tags/go"
+    },
+    {
+      "label": "CLI",
+      "permalink": "/docs/tags/cli"
+    },
+    {
+      "label": "Infrastructure",
+      "permalink": "/docs/tags/infrastructure"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Hyve",
+    "description": "Go-based developer infrastructure tooling",
+    "tags": [
+      "Go",
+      "CLI",
+      "Infrastructure"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "React Native AdMob Native Ads",
+    "permalink": "/docs/projects/react-native-admob"
+  },
+  "next": {
+    "title": "Portainer CLI",
+    "permalink": "/docs/projects/portainer-cli"
+  }
+}

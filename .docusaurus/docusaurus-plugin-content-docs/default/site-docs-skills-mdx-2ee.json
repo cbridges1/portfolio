@@ -1,0 +1,31 @@
+{
+  "id": "skills",
+  "title": "Skills & Experience",
+  "description": "Technical skills and experience of Jalen Bridges",
+  "source": "@site/docs/skills.mdx",
+  "sourceDirName": ".",
+  "slug": "/skills",
+  "permalink": "/docs/skills",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://jalenbridges.dev/admin#/collections/doc/docs/skills.mdx",
+  "tags": [
+    {
+      "label": "Portfolio",
+      "permalink": "/docs/tags/portfolio"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Skills & Experience",
+    "description": "Technical skills and experience of Jalen Bridges",
+    "tags": [
+      "Portfolio"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Portainer CLI",
+    "permalink": "/docs/projects/portainer-cli"
+  }
+}

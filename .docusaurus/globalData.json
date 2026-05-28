@@ -1,0 +1,99 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "about",
+          "docs": [
+            {
+              "id": "about",
+              "path": "/docs/about",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro"
+            },
+            {
+              "id": "projects/acsys",
+              "path": "/docs/projects/acsys",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "projects/hyve",
+              "path": "/docs/projects/hyve",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "projects/portainer-cli",
+              "path": "/docs/projects/portainer-cli",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "projects/react-native-admob",
+              "path": "/docs/projects/react-native-admob",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "skills",
+              "path": "/docs/skills",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "test-page",
+              "path": "/docs/test-page"
+            },
+            {
+              "id": "tutorial-basics/congratulations",
+              "path": "/docs/tutorial-basics/congratulations"
+            },
+            {
+              "id": "tutorial-basics/create-a-blog-post",
+              "path": "/docs/tutorial-basics/create-a-blog-post"
+            },
+            {
+              "id": "tutorial-basics/create-a-document",
+              "path": "/docs/tutorial-basics/create-a-document"
+            },
+            {
+              "id": "tutorial-basics/create-a-page",
+              "path": "/docs/tutorial-basics/create-a-page"
+            },
+            {
+              "id": "tutorial-basics/deploy-your-site",
+              "path": "/docs/tutorial-basics/deploy-your-site"
+            },
+            {
+              "id": "tutorial-extras/manage-docs-versions",
+              "path": "/docs/tutorial-extras/manage-docs-versions"
+            },
+            {
+              "id": "tutorial-extras/translate-your-site",
+              "path": "/docs/tutorial-extras/translate-your-site"
+            },
+            {
+              "id": "/category/projects",
+              "path": "/docs/category/projects",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/about",
+                "label": "about"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

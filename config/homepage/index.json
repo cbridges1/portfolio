@@ -1,0 +1,31 @@
+{
+  "label": "Homepage",
+  "title": "Jalen Bridges",
+  "description": "Software engineer at Guidewire Software. Builder of open-source tools, CLIs, and developer infrastructure.",
+  "blocks": [
+    {
+      "title": "Jalen Bridges",
+      "subtitle": "Software engineer at Guidewire Software. Builder of open-source tools, CLIs, and developer infrastructure.",
+      "document": "docs/about.mdx",
+      "documentLabel": "View Portfolio",
+      "_template": "hero"
+    },
+    {
+      "items": [
+        {
+          "title": "Acsys — Headless CMS",
+          "description": "Easy-install headless CMS backed by SQLite, MySQL, or Cloud Firestore. 52 GitHub stars.\n"
+        },
+        {
+          "title": "Go Tooling",
+          "description": "CLIs and infrastructure automation built in Go: Portainer CLI, Hyve, Universal Search.\n"
+        },
+        {
+          "title": "React Native",
+          "description": "Native ad rendering library for React Native using Android native views and Google AdMob.\n"
+        }
+      ],
+      "_template": "features"
+    }
+  ]
+}

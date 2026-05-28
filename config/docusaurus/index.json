@@ -1,0 +1,97 @@
+{
+  "label": "Settings",
+  "navbar": [
+    {
+      "label": "About",
+      "link": "doc",
+      "docLink": "docs/about.mdx",
+      "position": "left"
+    },
+    {
+      "label": "Projects",
+      "link": "doc",
+      "docLink": "docs/projects/acsys.mdx",
+      "position": "left"
+    },
+    {
+      "label": "Skills",
+      "link": "doc",
+      "docLink": "docs/skills.mdx",
+      "position": "left"
+    },
+    {
+      "label": "GitHub",
+      "link": "external",
+      "externalLink": "https://github.com/cbridges1",
+      "position": "right"
+    }
+  ],
+  "logo": {
+    "alt": "Jalen Bridges",
+    "src": "/img/tina-icon.svg"
+  },
+  "title": "Jalen Bridges",
+  "tagline": "Software Engineer at Guidewire Software",
+  "footer": {
+    "style": "dark",
+    "links": [
+      {
+        "title": "Portfolio",
+        "items": [
+          {
+            "label": "About",
+            "to": "docs/about.mdx",
+            "_template": "internal"
+          },
+          {
+            "label": "Skills",
+            "to": "docs/skills.mdx",
+            "_template": "internal"
+          }
+        ]
+      },
+      {
+        "title": "Projects",
+        "items": [
+          {
+            "label": "Acsys",
+            "to": "docs/projects/acsys.mdx",
+            "_template": "internal"
+          },
+          {
+            "label": "React Native AdMob",
+            "to": "docs/projects/react-native-admob.mdx",
+            "_template": "internal"
+          },
+          {
+            "label": "Hyve",
+            "to": "docs/projects/hyve.mdx",
+            "_template": "internal"
+          },
+          {
+            "label": "Portainer CLI",
+            "to": "docs/projects/portainer-cli.mdx",
+            "_template": "internal"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "items": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/cbridges1",
+            "_template": "external"
+          },
+          {
+            "label": "Guidewire Software",
+            "href": "https://www.guidewire.com",
+            "_template": "external"
+          }
+        ]
+      }
+    ],
+    "copyright": "Jalen Bridges"
+  },
+  "url": "https://jalenbridges.dev"
+}
