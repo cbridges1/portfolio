@@ -18,13 +18,8 @@ export const Card = ({ title, icon, href, horizontal, color, children }) => {
     </>
   );
 
-  const className = clsx(
-    styles.card,
-    horizontal && styles.horizontal,
-    color && styles.accented,
-  );
-
-  const style = color ? { "--card-accent": color } : {};
+  const className = clsx(styles.card, horizontal && styles.horizontal);
+  const style = {};
 
   if (href) {
     return (
