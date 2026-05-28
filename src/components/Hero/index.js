@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import styles from "./index.module.css";
 import { getDocPath, titleFromSlug } from "../../../util";
@@ -7,28 +6,24 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 export const Hero = ({ data, index }) => {
   const { siteConfig } = useDocusaurusContext();
+  const title = data.title || siteConfig.title;
+  const subtitle = data.subtitle || siteConfig.tagline;
 
   return (
-    <header
-      key={index}
-      className={clsx("hero hero--primary", styles.heroBanner)}
-    >
+    <header key={index} className={styles.heroBanner}>
       <div className="container">
-        <h1 className="hero__title">
-          {data.title ? data.title : siteConfig.title}
-        </h1>
-        <p className="hero__subtitle">
-          {data.subtitle ? data.subtitle : siteConfig.tagline}
-        </p>
+        <h1 className={styles.heroTitle}>{title}</h1>
+        {subtitle && <p className={styles.heroSubtitle}>{subtitle}</p>}
         {data.document && (
           <div className={styles.buttons}>
+            <Link className={styles.btnPrimary} to={getDocPath(data.document)}>
+              {data.documentLabel || titleFromSlug(data.document)}
+            </Link>
             <Link
-              className="button button--secondary button--lg"
-              to={getDocPath(data.document)}
+              href="https://github.com/cbridges1"
+              style={{ fontSize: "0.9rem", fontWeight: 500 }}
             >
-              {data.documentLabel
-                ? data.documentLabel
-                : titleFromSlug(data.document)}
+              GitHub →
             </Link>
           </div>
         )}

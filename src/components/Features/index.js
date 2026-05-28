@@ -4,15 +4,13 @@ import styles from "./styles.module.css";
 
 const Feature = ({ image, title, description }) => {
   return (
-    <div className={clsx("col col--4")}>
-      {image && (
-        <div className="text--center">
-          <img className={styles.featureSvg} src={image} role="img" />
-        </div>
-      )}
-      <div className="text--center padding-horiz--md">
-        {title && <h3>{title}</h3>}
-        {description && <p>{description}</p>}
+    <div className={clsx("col col--4")} style={{ marginBottom: "1rem" }}>
+      <div className={styles.card}>
+        {image && (
+          <img className={styles.cardImage} src={image} role="img" alt="" />
+        )}
+        {title && <h3 className={styles.cardTitle}>{title}</h3>}
+        {description && <p className={styles.cardDesc}>{description}</p>}
       </div>
     </div>
   );

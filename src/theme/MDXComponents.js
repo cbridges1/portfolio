@@ -5,13 +5,16 @@ import Details from "@theme/Details";
 import Tabs from "@theme-original/Tabs";
 import TabItem from "@theme-original/TabItem";
 import DocCardList from "@theme-original/DocCardList";
+import { Card, CardGroup } from "../components/Card";
 
 export default {
   ...MDXComponents,
-  Details: Details,
-  CodeBlock: CodeBlock,
-  Tabs: Tabs,
-  TabItem: TabItem,
+  Details,
+  CodeBlock,
+  Tabs,
+  TabItem,
   Admonition: MDXComponents.admonition,
-  DocCardList: DocCardList,
+  DocCardList,
+  Card,
+  CardGroup,
 };
