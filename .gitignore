@@ -16,7 +16,7 @@
 
 # production
 /build
-
+/.docusaurus
 /public/pagefind/
 
 # misc
