@@ -133,6 +133,16 @@
   filter: invert(1);
 }
 
+/* ─── Color mode toggle — always light so it's visible on dark navbar ── */
+.navbar__items .clean-btn[class*="toggleButton"] svg,
+.navbar__items button[class*="colorModeToggle"] svg {
+  color: #e5e7eb;
+}
+[data-theme="light"] .navbar__items button[class*="colorModeToggle"] svg,
+[data-theme="dark"] .navbar__items button[class*="colorModeToggle"] svg {
+  color: #e5e7eb;
+}
+
 /* ─── Sidebar ─────────────────────────────────────────────── */
 .menu {
   padding: 0.75rem 0.5rem !important;
