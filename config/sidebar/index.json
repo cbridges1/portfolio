@@ -24,6 +24,10 @@
         {
           "document": "docs/projects/portainer-cli.mdx",
           "_template": "doc"
+        },
+        {
+          "document": "docs/projects/krawlpass.mdx",
+          "_template": "doc"
         }
       ],
       "_template": "category"

@@ -1056,7 +1056,8 @@ var config_default = defineConfig({
   // Get this from tina.io
   build: {
     outputFolder: "admin",
-    publicFolder: "static"
+    publicFolder: "static",
+    basePath: "portfolio"
   },
   media: {
     tina: {
