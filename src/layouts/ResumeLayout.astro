@@ -138,12 +138,13 @@ const qrCodeSvg = await QRCode.toString(portfolioUrl, {
 				justify-content: space-between;
 				align-items: center;
 				padding: 0.75rem 1.5rem;
-				background: #111827;
-				color: #fff;
+				background: #ffffff;
+				color: #111827;
+				border-bottom: 1px solid #e5e7eb;
 			}
 
 			.toolbar a {
-				color: #fff;
+				color: #111827;
 				text-decoration: none;
 				font-size: 0.9rem;
 			}
@@ -162,6 +163,20 @@ const qrCodeSvg = await QRCode.toString(portfolioUrl, {
 				background: #000;
 			}
 
+			/* Match the site header's own light/dark background so this page's
+			   toolbar reads as the same "header" as every other page. */
+			@media (prefers-color-scheme: dark) {
+				.toolbar {
+					background: #0f0f0f;
+					color: #fff;
+					border-bottom-color: #27272a;
+				}
+
+				.toolbar a {
+					color: #fff;
+				}
+			}
+
 			.resume {
 				max-width: 8.5in;
 				margin: 2rem auto;
@@ -176,7 +191,7 @@ const qrCodeSvg = await QRCode.toString(portfolioUrl, {
 				justify-content: space-between;
 				align-items: flex-start;
 				gap: 1rem;
-				border-bottom: 2px solid #111827;
+				border-bottom: 2px solid #4b5563;
 				padding-bottom: 0.75rem;
 				margin-bottom: 1.5rem;
 			}
@@ -219,7 +234,7 @@ const qrCodeSvg = await QRCode.toString(portfolioUrl, {
 			}
 
 			.contact a {
-				color: #111827;
+				color: #4b5563;
 				text-decoration: underline;
 			}
 
@@ -234,7 +249,7 @@ const qrCodeSvg = await QRCode.toString(portfolioUrl, {
 				border-bottom: 1px solid #d1d5db;
 				padding-bottom: 0.25rem;
 				margin-bottom: 0.75rem;
-				color: #111827;
+				color: #4b5563;
 				break-after: avoid;
 			}
 
