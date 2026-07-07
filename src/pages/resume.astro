@@ -1,0 +1,12 @@
+---
+import { getEntry } from "astro:content";
+import ResumeLayout from "../layouts/ResumeLayout.astro";
+
+const resumeEntry = await getEntry("resume", "resume");
+
+if (!resumeEntry) {
+  throw new Error("Missing resume content entry: src/content/resume/resume.md");
+}
+---
+
+<ResumeLayout resume={resumeEntry.data} />

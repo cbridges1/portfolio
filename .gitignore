@@ -15,8 +15,8 @@
 /out/
 
 # production
-/build
-/.docusaurus
+/dist
+/.astro
 /public/pagefind/
 
 # misc
