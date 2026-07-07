@@ -29,7 +29,10 @@ const qrCodeSvg = await QRCode.toString(portfolioUrl, {
 	<body>
 		<div class="toolbar">
 			<a href={base}>← Back to portfolio</a>
-			<button type="button" onclick="window.print()">Download PDF</button>
+			<div class="toolbar-actions">
+				<a href={`${base}resume.docx`} class="toolbar-button">Download Word</a>
+				<button type="button" class="toolbar-button" onclick="window.print()">Download PDF</button>
+			</div>
 		</div>
 
 		<main class="resume">
@@ -143,28 +146,40 @@ const qrCodeSvg = await QRCode.toString(portfolioUrl, {
 				border-bottom: 1px solid #e5e7eb;
 			}
 
-			.toolbar a {
+			.toolbar > a {
 				color: #111827;
 				text-decoration: none;
 				font-size: 0.9rem;
 			}
 
-			.toolbar button {
-				background: #111827;
-				color: #fff;
-				border: 1px solid #374151;
+			.toolbar-actions {
+				display: flex;
+				gap: 0.75rem;
+			}
+
+			/* Buttons share the toolbar's own background rather than contrasting
+			   against it, so they read as part of the same header — defined by
+			   their border instead of a fill color. */
+			.toolbar-button {
+				background: #ffffff;
+				color: #111827;
+				border: 1px solid #111827;
 				border-radius: 6px;
 				padding: 0.5rem 1rem;
 				font-size: 0.9rem;
+				font-family: inherit;
 				cursor: pointer;
+				text-decoration: none;
+				line-height: 1;
 			}
 
-			.toolbar button:hover {
-				background: #000;
+			.toolbar-button:hover {
+				background: #f3f4f6;
 			}
 
 			/* Match the site header's own light/dark background so this page's
-			   toolbar reads as the same "header" as every other page. */
+			   toolbar (and its buttons) reads as the same "header" as every
+			   other page. */
 			@media (prefers-color-scheme: dark) {
 				.toolbar {
 					background: #0f0f0f;
@@ -172,8 +187,18 @@ const qrCodeSvg = await QRCode.toString(portfolioUrl, {
 					border-bottom-color: #27272a;
 				}
 
-				.toolbar a {
+				.toolbar > a {
 					color: #fff;
+				}
+
+				.toolbar-button {
+					background: #0f0f0f;
+					color: #fff;
+					border-color: #fff;
+				}
+
+				.toolbar-button:hover {
+					background: #27272a;
 				}
 			}
 
