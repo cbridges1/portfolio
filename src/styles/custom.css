@@ -132,6 +132,14 @@ nav.sidebar a:hover {
   overflow: hidden;
 }
 
+/* Unify card corner rounding — Starlight's <Card> ships square corners while
+   <LinkCard> ships 0.5rem, which reads as inconsistent side by side. */
+.card,
+.sl-link-card {
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
 /* Headings a touch tighter */
 .sl-markdown-content h2 {
   font-weight: 700;

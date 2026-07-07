@@ -10,6 +10,8 @@ basics:
       href: https://cbridges1.github.io/portfolio
     - label: github.com/cbridges1
       href: https://github.com/cbridges1
+    - label: Projects
+      href: https://cbridges1.github.io/portfolio/about/#featured-projects
 summary: Full-stack engineer bridging legacy enterprise systems and modern cloud infrastructure.
 experience:
   - company: Guidewire
@@ -33,25 +35,11 @@ projects:
     href: https://github.com/cbridges1/hyve
     bullets:
       - "Go CLI that manages Kubernetes clusters end-to-end from a Git state repository: create/scale/delete against any cloud, then drift-detect and reconcile in-cluster resources on every cycle."
-      - "Pluggable module system lets any provider (Civo, AWS EKS, GCP GKE, Azure AKS shipped as first-party examples) be scripted as a versioned package, content-addressed and locked in a manifest — no cloud SDKs embedded in the core."
-      - Terraform-style declarative resource layer — raw manifests and Helm releases are drift-checked against both desired config and live cluster state, and re-applied automatically.
-      - Lifecycle-hook workflow engine (pre/post-create, pre/post-delete) for imperative automation — secrets, DNS, bootstrap steps — that doesn't fit a pure-declarative model, with remote, content-addressed workflow references.
-      - Ships a guided terminal UI and drives real clusters through GitHub Actions CI/CD; full Go test suite alongside the reconcile engine.
+      - "Pluggable module system lets any provider (Civo, AWS EKS, GCP GKE, Azure AKS shipped as first-party examples) be scripted as a versioned, content-addressed package — no cloud SDKs embedded in the core."
   - name: Acsys — CMS for Firestore, MySQL & SQLite
     href: https://github.com/acsysio/acsys
     bullets:
       - Open-source content management system built with React and Express for updating content on small websites.
-  - name: ESXi Homelab — self-hosted VM & container infrastructure
-    bullets:
-      - Maintain a home server running multiple VMs, including a Linux host that serves containerized Docker applications via Portainer and Docker Compose.
-      - Nextcloud runs behind an NGINX reverse proxy, reachable outside the internal network through a custom domain.
-      - Dynamic DNS is handled by a ddclient instance on the application VM.
-      - All data is mirrored to a separate drive via rsync on a periodic cron job.
-  - name: Event Finder — cross-platform event discovery app
-    bullets:
-      - Built with React Native; backend APIs hosted on GCP Cloud Run.
-      - Cloud SQL (MySQL) queries nearby events by coordinates; Firestore serves as the primary database.
-      - Integrated the HERE.com place provider as a lower-cost alternative to Google Places at expected usage volumes.
 education:
   - school: Jacksonville State University
     location: Jacksonville, AL
@@ -76,13 +64,21 @@ skills:
       - Next.js
       - React
       - React Native
+      - Spring Boot
   - category: Databases
     items:
       - MySQL
       - PostgreSQL
       - DB2
       - Oracle (some)
-  - category: Cloud
+  - category: Cloud — AWS
+    items:
+      - EKS
+      - Aurora (RDS)
+      - Secrets Manager
+      - S3
+      - IAM
+  - category: Cloud — GCP
     items:
       - GCP Compute Engine
       - App Engine
