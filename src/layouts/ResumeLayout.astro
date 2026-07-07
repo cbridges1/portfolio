@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import QRCode from "qrcode";
 
 interface Props {
   resume: CollectionEntry<"resume">["data"];
@@ -8,6 +9,13 @@ interface Props {
 const { resume } = Astro.props;
 const { basics, summary, experience, projects, education, skills } = resume;
 const base = import.meta.env.BASE_URL;
+
+const portfolioUrl = "https://cbridges1.github.io/portfolio/";
+const qrCodeSvg = await QRCode.toString(portfolioUrl, {
+  type: "svg",
+  margin: 0,
+  color: { dark: "#111827", light: "#ffffff" },
+});
 ---
 
 <html lang="en">
@@ -26,16 +34,19 @@ const base = import.meta.env.BASE_URL;
 
 		<main class="resume">
 			<header class="resume-header">
-				<h1>{basics.name}</h1>
-				<p class="title">{basics.title}</p>
-				<ul class="contact">
-					<li>{basics.location}</li>
-					<li>{basics.phone}</li>
-					<li><a href={`mailto:${basics.email}`}>{basics.email}</a></li>
-					{basics.links.map((link) => (
-						<li><a href={link.href}>{link.label}</a></li>
-					))}
-				</ul>
+				<div class="resume-header-main">
+					<h1>{basics.name}</h1>
+					<p class="title">{basics.title}</p>
+					<ul class="contact">
+						<li>{basics.location}</li>
+						<li>{basics.phone}</li>
+						<li><a href={`mailto:${basics.email}`}>{basics.email}</a></li>
+						{basics.links.map((link) => (
+							<li><a href={link.href}>{link.label}</a></li>
+						))}
+					</ul>
+				</div>
+				<div class="resume-header-qr" set:html={qrCodeSvg} />
 			</header>
 
 			<section class="resume-section">
@@ -161,9 +172,29 @@ const base = import.meta.env.BASE_URL;
 			}
 
 			.resume-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+				gap: 1rem;
 				border-bottom: 2px solid #111827;
 				padding-bottom: 0.75rem;
 				margin-bottom: 1.5rem;
+			}
+
+			.resume-header-main {
+				min-width: 0;
+			}
+
+			.resume-header-qr {
+				flex-shrink: 0;
+				width: 84px;
+				height: 84px;
+			}
+
+			.resume-header-qr :global(svg) {
+				display: block;
+				width: 100%;
+				height: 100%;
 			}
 
 			.resume-header h1 {
@@ -288,7 +319,8 @@ const base = import.meta.env.BASE_URL;
 			@media print {
 				/* Zero @page margin so Chrome/Firefox have no room left to draw their
 				   own print header/footer (date, URL, page number) — the visual
-				   margin is recreated below as padding on .resume instead. */
+				   margin is recreated below as padding on .resume instead, matching
+				   the screen view's own 0.75in padding so print looks the same as web. */
 				@page {
 					size: letter;
 					margin: 0;
@@ -304,69 +336,20 @@ const base = import.meta.env.BASE_URL;
 
 				.resume {
 					margin: 0;
-					padding: 0.5in;
+					padding: 0.75in;
 					box-shadow: none;
 					max-width: none;
-					line-height: 1.25;
-					font-size: 0.88rem;
+					/* padding-top/bottom on a box that spans multiple printed pages is
+					   only applied once (on the first/last fragment) by default, which
+					   left continuation pages with no top margin. `clone` re-applies the
+					   full padding on every page fragment instead. */
+					-webkit-box-decoration-break: clone;
+					box-decoration-break: clone;
 				}
 
-				a {
-					color: inherit !important;
-					text-decoration: none;
-				}
-
-				.resume-header {
-					margin-bottom: 0.7rem;
-					padding-bottom: 0.4rem;
-				}
-
-				.resume-header h1 {
-					font-size: 1.5rem;
-				}
-
-				.resume-header .title {
-					margin: 0.1rem 0 0.4rem;
-					font-size: 0.92rem;
-				}
-
-				.resume-section {
-					margin-bottom: 0.6rem;
-				}
-
-				.resume-section h2 {
-					font-size: 0.9rem;
-					margin-bottom: 0.3rem;
-				}
-
-				.entry {
-					margin-bottom: 0.4rem;
-					break-inside: avoid;
-				}
-
-				.entry ul {
-					margin-top: 0.15rem;
-				}
-
-				.entry li {
-					margin-bottom: 0.05rem;
-					font-size: 0.82rem;
-				}
-
-				.degree {
-					font-size: 0.85rem;
-				}
-
-				.skills-grid {
-					gap: 0.3rem 1.5rem;
-				}
-
+				.entry,
 				.skill-group {
 					break-inside: avoid;
-				}
-
-				.skill-group p {
-					font-size: 0.82rem;
 				}
 			}
 		</style>
