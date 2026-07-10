@@ -16,6 +16,8 @@ const shouldRenderSearch =
 	config.pagefind || config.components.Search !== "@astrojs/starlight/components/Search.astro";
 
 const base = import.meta.env.BASE_URL;
+const pathname = Astro.url.pathname;
+const isHomePage = pathname === base || pathname === base.replace(/\/$/, "");
 ---
 
 <div class="header sl-flex">
@@ -23,7 +25,7 @@ const base = import.meta.env.BASE_URL;
 		<SiteTitle {...Astro.props} />
 	</div>
 	<div class="sl-flex">
-		{shouldRenderSearch && <Search {...Astro.props} />}
+		{shouldRenderSearch && !isHomePage && <Search {...Astro.props} />}
 	</div>
 	<div class="sl-hidden md:sl-flex right-group">
 		<a href={`${base}resume/`} class="docs-header-link">

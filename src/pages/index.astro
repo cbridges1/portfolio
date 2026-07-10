@@ -10,11 +10,11 @@ const base = import.meta.env.BASE_URL;
 	frontmatter={{
 		title: "Home",
 		description:
-			"Software engineer at Guidewire Software. Builder of open-source tools, CLIs, and developer infrastructure.",
+			"Platform engineer at Guidewire Software. Builder of Kubernetes infrastructure, developer platforms, and open-source CLIs.",
 		template: "splash",
 		hero: {
 			title: "Jalen Bridges",
-			tagline: "Software engineer at Guidewire Software. Builder of open-source tools, CLIs, and developer infrastructure.",
+			tagline: "Platform engineer at Guidewire Software. Builder of Kubernetes infrastructure, developer platforms, and open-source CLIs.",
 			actions: [
 				{ text: "View Portfolio", link: `${base}about/`, icon: "right-arrow", variant: "primary" },
 				{ text: "Resume", link: `${base}resume/`, icon: "document" },
@@ -26,11 +26,6 @@ const base = import.meta.env.BASE_URL;
 	<h2>Featured Projects</h2>
 	<CardGrid>
 		<LinkCard
-			title="Acsys — Headless CMS"
-			href={`${base}projects/acsys/`}
-			description="Easy-install headless CMS backed by SQLite, MySQL, or Cloud Firestore. 52 GitHub stars."
-		/>
-		<LinkCard
 			title="Hyve — GitOps CLI"
 			href={`${base}projects/hyve/`}
 			description="Go-based developer infrastructure tooling with a companion CLI for Kubernetes cluster lifecycle management."
@@ -41,6 +36,11 @@ const base = import.meta.env.BASE_URL;
 			description="Command-line interface for managing Portainer container environments."
 		/>
 		<LinkCard
+			title="Acsys — Headless CMS"
+			href={`${base}projects/acsys/`}
+			description="Easy-install headless CMS backed by SQLite, MySQL, or Cloud Firestore. 52 GitHub stars."
+		/>
+		<LinkCard
 			title="React Native AdMob"
 			href={`${base}projects/react-native-admob/`}
 			description="Native ad rendering library for React Native using Android native views and Google AdMob."
@@ -49,21 +49,21 @@ const base = import.meta.env.BASE_URL;
 
 	<h2>Tech Stack</h2>
 	<CardGrid cols={3}>
-		<Card title="Languages" icon="seti:javascript">
+		<Card title="Languages" icon="laptop">
 			JavaScript · TypeScript · Go · Java · Shell
+		</Card>
+		<Card title="Platform &amp; Infrastructure" icon="server">
+			Kubernetes (Crossplane, KubeVela) · AWS (EKS, Aurora, Secrets Manager) · GCP · Docker · Nginx
 		</Card>
 		<Card title="Frameworks" icon="puzzle">
 			React · React Native · Node.js · Express · Next.js · Spring Boot
-		</Card>
-		<Card title="Infrastructure" icon="cloud">
-			AWS (EKS, Aurora, Secrets Manager) · GCP · Firebase · Docker · Portainer · Nginx
 		</Card>
 	</CardGrid>
 
 	<h2>Currently</h2>
 	<p>
-		Software engineer at <strong>Guidewire Software</strong>, building and maintaining
-		enterprise software for the insurance industry.
+		Platform engineer at <strong>Guidewire Software</strong>, building Kubernetes-based
+		developer tooling and infrastructure for the insurance industry.
 	</p>
 	<p>
 		Open-source contributor — see <a href="https://github.com/cbridges1">github.com/cbridges1</a> for

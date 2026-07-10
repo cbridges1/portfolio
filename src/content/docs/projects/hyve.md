@@ -5,6 +5,7 @@ description: Go-based developer infrastructure tooling — in progress
 
 **Go-based developer infrastructure project** — actively in development, details subject to change.
 
+**Website:** [cbridges1.github.io/hyve-website](https://cbridges1.github.io/hyve-website/)
 **GitHub:** [github.com/cbridges1/hyve](https://github.com/cbridges1/hyve)
 
 ---

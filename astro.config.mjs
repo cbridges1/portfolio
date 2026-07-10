@@ -15,6 +15,7 @@ export default defineConfig({
         light: "./src/assets/logo.svg",
         dark: "./src/assets/logo-dark.svg",
         replacesTitle: true,
+        alt: "Jalen Bridges",
       },
       favicon: "/favicon.svg",
       social: [

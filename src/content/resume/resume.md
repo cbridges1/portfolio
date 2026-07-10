@@ -1,7 +1,7 @@
 ---
 basics:
   name: Cedric Bridges
-  title: Full-stack engineer bridging legacy enterprise systems and modern cloud infrastructure.
+  title: Platform engineer building Kubernetes infrastructure and developer tooling.
   email: cedric.bridges3@gmail.com
   phone: (256) 613-2531
   location: Hoover, AL 35244
@@ -12,7 +12,7 @@ basics:
       href: https://github.com/cbridges1
     - label: Projects
       href: https://cbridges1.github.io/portfolio/about/#featured-projects
-summary: Full-stack engineer bridging legacy enterprise systems and modern cloud infrastructure.
+summary: Platform engineer building Kubernetes infrastructure and developer tooling, with a background in enterprise systems.
 experience:
   - company: Guidewire
     role: Platform Engineer
@@ -29,10 +29,10 @@ experience:
     endDate: May 2023
     bullets:
       - Built and maintained a JSP, HTML, and CSS web application giving business users self-service access to backend systems for testing future-dated claims.
-      - Supported electronic data interchange with custom COBOL and JCL solutions on the mainframe.
+      - Also supported legacy EDI processes on the mainframe (COBOL, JCL).
 projects:
   - name: Hyve — GitOps CLI for Kubernetes cluster lifecycle management
-    href: https://github.com/cbridges1/hyve
+    href: https://cbridges1.github.io/hyve-website/
     bullets:
       - "Go CLI that manages Kubernetes clusters end-to-end from a Git state repository: create/scale/delete against any cloud, then drift-detect and reconcile in-cluster resources on every cycle."
       - "Pluggable module system lets any provider (Civo, AWS EKS, GCP GKE, Azure AKS shipped as first-party examples) be scripted as a versioned, content-addressed package — no cloud SDKs embedded in the core."
@@ -48,29 +48,12 @@ education:
     startDate: Aug 2011
     endDate: Dec 2015
 skills:
-  - category: Languages
+  - category: Platform / Infra
     items:
-      - Go
-      - Java
-      - JavaScript
-      - COBOL
-      - SQL
-      - HTML
-      - CSS
-      - C++ (some)
-  - category: Frameworks
-    items:
-      - Node.js
-      - Next.js
-      - React
-      - React Native
-      - Spring Boot
-  - category: Databases
-    items:
-      - MySQL
-      - PostgreSQL
-      - DB2
-      - Oracle (some)
+      - Kubernetes
+      - Crossplane
+      - KubeVela
+      - Docker
   - category: Cloud — AWS
     items:
       - EKS
@@ -86,19 +69,31 @@ skills:
       - Cloud Run
       - Cloud Build
       - Firebase
-  - category: Platform / Infra
+  - category: Languages
     items:
-      - Kubernetes
-      - Crossplane
-      - KubeVela
-  - category: Mainframe
+      - Go
+      - Java
+      - JavaScript
+      - SQL
+      - HTML
+      - CSS
+      - C++ (some)
+      - COBOL
+  - category: Frameworks
     items:
-      - ISPF
-      - TSO
-      - JCL
+      - Node.js
+      - Next.js
+      - React
+      - React Native
+      - Spring Boot
+  - category: Databases
+    items:
+      - MySQL
+      - PostgreSQL
+      - DB2
+      - Oracle (some)
   - category: Tools
     items:
-      - Docker
       - Git
       - Maven
       - VS Code
@@ -107,4 +102,9 @@ skills:
       - Passport
       - Topaz
       - VMware ESXi
+  - category: Mainframe
+    items:
+      - ISPF
+      - TSO
+      - JCL
 ---
