@@ -1,10 +1,9 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    path { stroke: #111111; }
+    .main { fill: #111111; }
     @media (prefers-color-scheme: dark) {
-      path { stroke: #f3f4f6; }
+      .main { fill: #f3f4f6; }
     }
   </style>
-  <path d="M13 5H24" stroke-width="3.25" stroke-linecap="round"/>
-  <path d="M19 5V17C19 24 14.5 27 9.5 27C6.5 27 3.8 25.8 2 23.5" stroke-width="3.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="main" x="16" y="25.5" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="29" text-anchor="middle">J</text>
 </svg>
