@@ -1,5 +1,6 @@
 ---
 import Default from "@astrojs/starlight/components/Footer.astro";
+import PwaToast from "./PwaToast.astro";
 
 const columns = [
 	{
@@ -8,6 +9,7 @@ const columns = [
 			{ label: "About", href: "/portfolio/about/" },
 			{ label: "Skills", href: "/portfolio/skills/" },
 			{ label: "Resume", href: "/portfolio/resume/" },
+			{ label: "QR Code", href: "/portfolio/qr/" },
 		],
 	},
 	{
@@ -52,6 +54,7 @@ const year = new Date().getFullYear();
 </div>
 
 <Default {...Astro.props}><slot /></Default>
+<PwaToast />
 
 <style>
 	.site-footer {

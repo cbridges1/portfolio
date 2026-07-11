@@ -1,0 +1,79 @@
+<div id="pwa-toast" class="pwa-toast" role="status" hidden>
+	<span>A new version of this site is available.</span>
+	<button id="pwa-refresh" type="button">Refresh</button>
+	<button id="pwa-dismiss" type="button" aria-label="Dismiss">✕</button>
+</div>
+
+<style>
+	.pwa-toast {
+		position: fixed;
+		bottom: 1.25rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		background: var(--sl-color-bg-nav, #ffffff);
+		color: var(--sl-color-text, #111827);
+		border: 1px solid var(--sl-color-hairline, #111827);
+		border-radius: 0.6rem;
+		padding: 0.6rem 0.75rem 0.6rem 1rem;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+		z-index: 100;
+		font-size: var(--sl-text-sm, 0.85rem);
+		max-width: calc(100vw - 2rem);
+	}
+	.pwa-toast[hidden] {
+		display: none;
+	}
+	.pwa-toast button {
+		font-family: inherit;
+		font-size: var(--sl-text-sm, 0.85rem);
+		font-weight: 600;
+		border-radius: 0.4rem;
+		cursor: pointer;
+		border: none;
+		flex-shrink: 0;
+	}
+	#pwa-refresh {
+		background: var(--sl-color-text, #111827);
+		color: var(--sl-color-bg-nav, #ffffff);
+		padding: 0.35rem 0.75rem;
+	}
+	#pwa-refresh:hover {
+		opacity: 0.85;
+	}
+	#pwa-dismiss {
+		background: transparent;
+		color: var(--sl-color-gray-3, #6b7280);
+		padding: 0.35rem 0.4rem;
+		line-height: 1;
+	}
+	#pwa-dismiss:hover {
+		color: var(--sl-color-text, #111827);
+	}
+</style>
+
+<script>
+	if ("serviceWorker" in navigator) {
+		import("virtual:pwa-register").then(({ registerSW }) => {
+			const toast = document.getElementById("pwa-toast");
+			const refreshBtn = document.getElementById("pwa-refresh");
+			const dismissBtn = document.getElementById("pwa-dismiss");
+
+			const updateSW = registerSW({
+				immediate: true,
+				onNeedRefresh() {
+					toast?.removeAttribute("hidden");
+				},
+			});
+
+			refreshBtn?.addEventListener("click", () => {
+				updateSW(true);
+			});
+			dismissBtn?.addEventListener("click", () => {
+				toast?.setAttribute("hidden", "");
+			});
+		});
+	}
+</script>
