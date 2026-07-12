@@ -89,6 +89,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ["**/*.{html,css,js,svg,png,ico,woff2,txt,xml,json}"],
+        navigateFallbackDenylist: [/\.[^/?]+$/],
       },
     }),
   ],

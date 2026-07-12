@@ -34,7 +34,7 @@ const qrCodeSvg = await QRCode.toString(portfolioUrl, {
 		<div class="toolbar">
 			<a href={base} onclick="if (window.history.length > 1) { window.history.back(); return false; }">← Back to portfolio</a>
 			<div class="toolbar-actions">
-				<a href={`${base}resume.docx`} class="toolbar-button">Download Word</a>
+				<a href={`${base}resume.docx`} download="Cedric-Bridges-Resume.docx" class="toolbar-button">Download Word</a>
 				<button type="button" class="toolbar-button" onclick="window.print()">Download PDF</button>
 			</div>
 		</div>
